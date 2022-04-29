@@ -186,5 +186,19 @@ class Viaje{
         }
         return $asignacion;
     }
+
+    public function __toString()
+    {
+        return "**************************************************************"."\n".
+               "Destino a: ".$this->getDestino()."\n".
+               "Hora de partida: ".$this->getHoraPartida()."\n".
+               "Hora de llegada: ".$this->getHoraLlegada()."\n".
+               "Número de viaje: ".$this->getNumero()."\n".
+               "Importe: ".$this->getImporte()."\n".
+               "Fecha de viaje: ".$this->getFecha()."\n".
+               "Cantidad de asientos totales: ".$this->getCantAsientosTot()."\n".
+               "Cantidad de asientos disponibles: ".$this->getCantAsientosDisp()."\n".
+               "Responsable del viaje: ".$this->getObjResponsable()."\n";
+    }
 }
 ?>
