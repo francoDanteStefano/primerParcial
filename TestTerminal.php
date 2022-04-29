@@ -24,7 +24,7 @@ $empresa2 = new Empresa2 (2, "Princess Cruises",[$viaje3, $viaje4]);
 /* Terminal */
 $terminal = new Terminal ("Puerto Vallarta", "Calle falsa 123", [$empresa1, $empresa2]);
 
-//echo $terminal->ventaAutomatica(3, "10/05/22", "Puerto Rico",$empresa1);
+echo $terminal->ventaAutomatica(3, "10/05/22", "Puerto Rico", 1);
 
 echo $terminal->empresaMayorRecaudacion();
 

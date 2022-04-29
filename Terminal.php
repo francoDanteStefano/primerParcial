@@ -79,12 +79,12 @@ class Terminal{
      * @param string $destino
      * @param object $objEmpresa
      */
-    public function ventaAutomatica($cantAsientos, $fecha, $destino, $objEmpresa){
+    public function ventaAutomatica($cantAsientos, $fecha, $destino, $idEmpresa){
         $coleccionEmpresas = $this->getArrayObjEmpresas();
         $i = 0;
         $noEncontro = true;
         do{
-            if($coleccionEmpresas[$i] == $objEmpresa){
+            if($coleccionEmpresas[$i]->getIdentificacion() == $idEmpresa){
                 $viaje = $coleccionEmpresas[$i]->venderViajeADestino($cantAsientos, $destino, $fecha);
                 if ($viaje != null){
                     $noEncontro = false;
