@@ -1,6 +1,6 @@
 <?php
 
-class Empresa{
+class Empresa2{
     private $identificacion;
     private $nombre;
     private $arrayObjViajes;
@@ -60,7 +60,7 @@ class Empresa{
     /**************************************/
     
     /**
-     * Metodo construct, tiene por parametros los valores de cada atributo de la clase
+     * Metodo construct, tiene por parámetros los valores de cada atributo de la clase
      * @param int $identificacion
      * @param string $nombre
      * @param array $arrayObjViajes
@@ -126,7 +126,7 @@ class Empresa{
      * @param string $destino
      * @return object
      */
-    public function venderViajeADestino($cantAsientos, $destino){
+    public function venderViajeADestino($cantAsientos, $destino, $fechaViaje){
         $coleccionViajes = $this->getArrayObjViajes();
         $cantViajes = count($coleccionViajes);
         $seguirBuscando = true;
@@ -135,7 +135,8 @@ class Empresa{
         do {
             $viaje = $coleccionViajes[$i];
             $destinoViaje = $viaje->getDestino();
-            if ($destino == $destinoViaje){
+            $fecha = $viaje->getFecha();
+            if (($destino == $destinoViaje) && ($fecha == $fechaViaje )){
                 if($viaje->asignarAsientosDisponibles($cantAsientos)){
                     $objViaje = $viaje;
                     $seguirBuscando = false;
@@ -167,7 +168,8 @@ class Empresa{
      * Método que retorna los atributos de la clase en una cadena de caracteres
      */
     public function __toString(){
-        return "Identificación: ".$this->getIdentificacion()."\n".
+        return "**************************************************************"."\n".
+               "Identificación: ".$this->getIdentificacion()."\n".
                "Nombre: ".$this->getNombre()."\n".
                "Viajes: "."\n".$this->viajesToString();
     }

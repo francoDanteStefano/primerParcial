@@ -105,7 +105,7 @@ class Responsable{
     /**************************************/
 
     /**
-     * Metodo construct, tiene por parametros los valores de cada atributo de la clase
+     * Metodo construct, tiene por parámetros los valores de cada atributo de la clase
      * @param string $nombre
      * @param string $apellido
      * @param int $nroDocumento

@@ -1,6 +1,6 @@
 <?php
 
-class Viaje{
+class Viaje2{
     private $destino;
     private $horaPartida;
     private $horaLlegada;
@@ -150,7 +150,7 @@ class Viaje{
     /**************************************/
 
     /**
-     * Metodo construct, tiene por parametros los valores de cada atributo de la clase
+     * Metodo construct, tiene por parámetros los valores de cada atributo de la clase
      * @param string $destino
      * @param int $horaPartida
      * @param int $horaLlegada
@@ -181,6 +181,8 @@ class Viaje{
     public function asignarAsientosDisponibles($cantAsientos){
         $disponible = $this->getCantAsientosDisp();
         if ($cantAsientos <= $disponible){
+            $asientosDisponibles = $disponible - $cantAsientos;
+            $this->setCantAsientosDisp($asientosDisponibles);
             $asignacion = true;
         }else{
             $asignacion = false;
@@ -192,7 +194,7 @@ class Viaje{
      * Método que retorna los atributos de la clase en una cadena de caracteres
      */
     public function __toString(){
-        return "**************************************************************"."\n".
+        return "*******************************************"."\n".
                "Destino a: ".$this->getDestino()."\n".
                "Hora de partida: ".$this->getHoraPartida()."\n".
                "Hora de llegada: ".$this->getHoraLlegada()."\n".
