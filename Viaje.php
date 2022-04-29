@@ -169,7 +169,7 @@ class Viaje2{
         $this->importe = $importe;
         $this->fecha = $fecha;
         $this->cantAsientosTot = $cantAsientosTot;
-        $this->cantAsientosTot = $cantAsientosDisp;
+        $this->cantAsientosDisp = $cantAsientosDisp;
         $this->objResponsable = $objResponsable;
     }
     /**

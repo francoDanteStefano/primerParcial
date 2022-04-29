@@ -123,7 +123,7 @@ class Terminal{
             $viajes = $coleccionEmpresas[$i]->getArrayObjViajes();
             for($e = 0; $e<count($viajes); $e++){
                 if ($numViaje == $viajes[$e]->getNumero()){
-                    $responsable = $viajes[$e]->getObjResponsable;
+                    $responsable = $viajes[$e]->getObjResponsable();
                 }else{
                     $responsable = null;
                 }
