@@ -113,8 +113,7 @@ class Responsable{
      * @param string $mail
      * @param int $telefono
      */
-    public function __construct($nombre, $apellido, $nroDocumento, $direccion, $mail, $telefono)
-    {
+    public function __construct($nombre, $apellido, $nroDocumento, $direccion, $mail, $telefono){
         $this->nombre = $nombre;
         $this->apellido = $apellido;
         $this->nroDocumento = $nroDocumento;
@@ -126,8 +125,7 @@ class Responsable{
     /**
      * Método que retorna los atributos de la clase en una cadena de caracteres
      */
-    public function __toString()
-    {
+    public function __toString(){
         return "Nombre: ".$this->getNombre()."\n".
                "Apellido: ".$this->getApellido()."\n".
                "Nro de documento: ".$this->getNroDocumento()."\n".

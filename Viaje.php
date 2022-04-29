@@ -161,8 +161,7 @@ class Viaje{
      * @param int $cantAsientosDisp
      * @param object $objResponsable
      */
-    public function __construct($destino, $horaPartida, $horaLlegada, $numero, $importe, $fecha, $cantAsientosTot, $cantAsientosDisp, $objResponsable)
-    {
+    public function __construct($destino, $horaPartida, $horaLlegada, $numero, $importe, $fecha, $cantAsientosTot, $cantAsientosDisp, $objResponsable){
         $this->destino = $destino;
         $this->horaPartida = $horaPartida;
         $this->horaLlegada = $horaLlegada;
@@ -176,6 +175,8 @@ class Viaje{
     /**
      * Método que recibe por parámetro la cantidad de asientos que desean asignarse.
      * Retorna verdadero si se puede concretar, false caso contrario.
+     * @param int $cantAsientos
+     * @return boolean
      */
     public function asignarAsientosDisponibles($cantAsientos){
         $disponible = $this->getCantAsientosDisp();
@@ -187,8 +188,10 @@ class Viaje{
         return $asignacion;
     }
 
-    public function __toString()
-    {
+    /**
+     * Método que retorna los atributos de la clase en una cadena de caracteres
+     */
+    public function __toString(){
         return "**************************************************************"."\n".
                "Destino a: ".$this->getDestino()."\n".
                "Hora de partida: ".$this->getHoraPartida()."\n".
